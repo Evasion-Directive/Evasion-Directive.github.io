@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDirective</title>
+    <!-- Подключаем Tailwind CSS для красивого дизайна и шрифты -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-[#121214] text-gray-100 overflow-x-hidden antialiased">
+
+    <!-- Шапка сайта (Навигация) -->
+    <header class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center relative z-10">
+        <div class="flex items-center gap-3">
+            <!-- Место под вашу иконку/логотип -->
+            <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center font-bold text-lg text-white">Ξ</div>
+            <span class="text-xl font-bold tracking-tight">EDirective</span>
+        </div>
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
+            <a href="#home" class="hover:text-white transition-colors">Главная</a>
+            <a href="#features" class="hover:text-white transition-colors">Особенности</a>
+            <a href="#team" class="hover:text-white transition-colors">Команда</a>
+            <a href="#downloads" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-500 transition-all">Скачать</a>
+        </nav>
+    </header>
+
+    <!-- Главный экран (Hero Section) -->
+    <section id="home" class="max-w-7xl mx-auto px-6 pt-12 pb-24 md:pt-20 md:pb-32 flex flex-col md:flex-row items-center justify-between relative">
+        
+        <!-- Большой дизайнерский цветной круг на фоне (как на вашем скрине) -->
+        <div class="absolute -top-20 -right-20 w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-blue-900/20 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute top-[40%] left-[-10%] w-[400px] h-[400px] bg-purple-900/10 rounded-full blur-[150px] pointer-events-none"></div>
+
+        <!-- Текстовый блок (Левая сторона) -->
+        <div class="max-w-xl text-center md:text-left z-10">
+            <h1 class="text-4xl md:text-6xl font-bold tracking-tight leading-tight">
+                Встречайте <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">EDirective</span>
+            </h1>
+            <p class="mt-6 text-gray-400 text-lg md:text-xl leading-relaxed">
+                Текст.
+            </p>
+            <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                <a href="#downloads" class="px-8 py-4 bg-white text-black font-semibold rounded-xl hover:bg-gray-200 transition-all text-center shadow-lg shadow-white/5">
+                    Скачать
+                </a>
+                <a href="https://github.com/Evasion-Directive" target="_blank" class="px-8 py-4 bg-[#1a1a1e] border border-gray-800 text-gray-300 font-semibold rounded-xl hover:bg-[#222227] transition-all text-center">
+                    Исходный код на GitHub
+                </a>
+            </div>
+        </div>
+
+        <!-- Графический блок со смартфоном (Правая сторона) -->
+        <div class="mt-16 md:mt-0 relative z-10 flex justify-center w-full md:w-auto">
+            <!-- Элемент заднего фона под телефоном -->
+            <div class="absolute w-[280px] h-[280px] md:w-[450px] md:h-[450px] bg-gradient-to-br from-blue-600/30 to-purple-600/30 rounded-full -translate-y-6 animate-pulse"></div>
+            
+            <!-- Макет корпуса телефона -->
+            <div class="relative w-[260px] h-[530px] bg-[#09090b] border-[6px] border-[#27272a] rounded-[40px] shadow-2xl overflow-hidden p-2 flex items-center justify-center">
+                <!-- Камера-вырез внутри телефона -->
+                <div class="absolute top-4 w-4 h-4 bg-black rounded-full z-30"></div>
+                
+                <!-- Внутренний экран -->
+                <img src="https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=600" 
+                     alt="Скриншот прошивки" 
+                     class="w-full h-full object-cover rounded-[32px] opacity-80" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Вкладка/Блок: Особенности (Features) -->
+    <section id="features" class="bg-[#161619] py-24 border-t border-gray-950">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto">
+                <h2 class="text-3xl font-bold">Почему именно EDirective?</h2>
+                <p class="mt-4 text-gray-400">Фокусировка на защите пользователя и добавлении только того, что действительно ему нужно.</p>
+            </div>
+            
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Карточка 1 -->
+                <div class="bg-[#1c1c21] p-8 rounded-2xl border border-gray-800/50">
+                    <div class="w-12 h-12 bg-blue-600/10 text-blue-400 rounded-xl flex items-center justify-center text-xl font-bold mb-6">⚡</div>
+                    <h3 class="text-xl font-semibold">Достойная скорость</h3>
+                    <p class="mt-3 text-gray-400 text-sm leading-relaxed">Еще текст, лень писать.</p>
+                </div>
+                <!-- Карточка 2 -->
+                <div class="bg-[#1c1c21] p-8 rounded-2xl border border-gray-800/50">
+                    <div class="w-12 h-12 bg-purple-600/10 text-purple-400 rounded-xl flex items-center justify-center text-xl font-bold mb-6">🎨</div>
+                    <h3 class="text-xl font-semibold">Кастомизации в меру</h3>
+                    <p class="mt-3 text-gray-400 text-sm leading-relaxed">И снова текст, который заполню потом.</p>
+                </div>
+                <!-- Карточка 3 -->
+                <div class="bg-[#1c1c21] p-8 rounded-2xl border border-gray-800/50">
+                    <div class="w-12 h-12 bg-emerald-600/10 text-emerald-400 rounded-xl flex items-center justify-center text-xl font-bold mb-6">🔋</div>
+                    <h3 class="text-xl font-semibold">Забота о батарее</h3>
+                    <p class="mt-3 text-gray-400 text-sm leading-relaxed">Защита целостности аккумулятора и исправление возможных ошибок пользователя в использовании.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Вкладка/Блок: Команда (Team) -->
+    <section id="team" class="py-24 max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <h2 class="text-3xl font-bold">Наша Команда</h2>
+        </div>
+        <div class="flex flex-wrap justify-center gap-8">
+            <!-- Участник 1 -->
+            <div class="bg-[#161619] p-6 rounded-2xl border border-gray-800/50 w-64 text-center">
+                <div class="w-20 h-20 bg-gray-800 rounded-full mx-auto mb-4 overflow-hidden">
+                    <img src="https://github.com/identicons/evasion.png" alt="Разработчик" class="w-full h-full object-cover">
+                </div>
+                <h4 class="font-semibold text-lg">Мой никнейм</h4>
+                <p class="text-sm text-blue-400 mt-1">Lead Developer</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал сайта -->
+    <footer class="border-t border-gray-800 bg-[#0c0c0e] py-8 text-center text-sm text-gray-500">
+        <p>&copy; 2026 Evasion Directive. Продукт распространяется бесплатно. Сделано с любовью.</p>
+    </footer>
+
+</body>
+</html>
